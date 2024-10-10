@@ -3,7 +3,7 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import java.time.LocalDate;
 import java.math.BigDecimal;
-import bankkata.example.bankkata.enums.OperationType;;
+import bankkata.example.bankkata.enums.OperationType;
 
 
 
