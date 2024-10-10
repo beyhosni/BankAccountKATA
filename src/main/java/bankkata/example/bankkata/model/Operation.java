@@ -30,20 +30,5 @@ public class Operation {
         this.balanceAfterOperation = balanceAfterOperation;
     }
 
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public OperationType getType() {
-        return type;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
 }
 

@@ -7,7 +7,7 @@ import java.util.List;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import java.util.concurrent.Semaphore;
-import bankkata.example.bankkata.enums.OperationType;;
+import bankkata.example.bankkata.enums.OperationType;
 
 @NoArgsConstructor
 @Getter
@@ -63,7 +63,7 @@ public class Account {
      * @return a list of operations
      */
     public List<Operation> getOperations() {
-        return new ArrayList<>(operations); // Return a copy for safety
+        return new ArrayList<>(operations); 
     }
 
     /**
