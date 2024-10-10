@@ -55,4 +55,18 @@ class BankkataApplicationTests {
         assertEquals("Insufficient balance.", thrown.getMessage(), "Withdrawal should throw an exception for insufficient balance.");
     }
 
+    @Test
+    public void testDepositNegativeAmount() {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+            account.deposit(new BigDecimal("-100"));
+        }, "Expected deposit to throw an exception due to negative amount");
+        assertEquals("Deposit amount must be positive", thrown.getMessage());
+    }
+
+
+    @Test
+    public void testGetBalanceInitiallyZero() {
+        assertEquals(BigDecimal.ZERO, account.getBalance(), "Initial balance should be zero");
+    }
+
 }
