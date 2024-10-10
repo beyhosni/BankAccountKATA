@@ -5,17 +5,16 @@ import bankkata.example.bankkata.model.*;
 import bankkata.example.bankkata.service.AccountService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/account")
+@RequestMapping("/api/v1/account")
 public class AccountController {
     
     private final AccountService accountService;
 
-    public BankAccountController(AccountService accountService) {
+    public AccountController(AccountService accountService) {
         this.accountService = accountService;
     }
 
@@ -45,8 +44,5 @@ public class AccountController {
     public BigDecimal getBalance(){
         return accountService.getBalance();
     }
-
-
-
 
 }
