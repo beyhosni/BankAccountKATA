@@ -13,10 +13,11 @@ import java.util.List;
 @RequestMapping("/api/account")
 public class AccountController {
     
-    
-    @Autowired
-    private  AccountService accountService;
+    private final AccountService accountService;
 
+    public BankAccountController(AccountService accountService) {
+        this.accountService = accountService;
+    }
 
     @PostMapping("/deposit")
     public ResponseEntity<String> deposit(@RequestParam BigDecimal amount) {
