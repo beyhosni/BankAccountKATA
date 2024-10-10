@@ -13,6 +13,14 @@ public class Operation {
     private BigDecimal amount;
     private BigDecimal balanceAfterOperation;
 
+    /** 
+     * Constructor for creating an Operation instance.
+     * @param date the date of the operation
+     * @param type the type of the operation (DEPOSIT or WITHDRAW)
+     * @param amount the amount of money for the operation
+     * @param balanceAfterOperation the balance after the operation
+     */
+
     public Operation(LocalDate date, String type, BigDecimal amount, BigDecimal balanceAfterOperation) {
         this.date = date;
         this.type = type;
