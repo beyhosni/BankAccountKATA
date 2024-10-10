@@ -3,13 +3,15 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import java.time.LocalDate;
 import java.math.BigDecimal;
+import bankkata.example.bankkata.enums.OperationType;;
+
 
 
 @Data
 @AllArgsConstructor
 public class Operation {
     private LocalDate date;
-    private String type;
+    private OperationType type;
     private BigDecimal amount;
     private BigDecimal balanceAfterOperation;
 
@@ -21,7 +23,7 @@ public class Operation {
      * @param balanceAfterOperation the balance after the operation
      */
 
-    public Operation(LocalDate date, String type, BigDecimal amount, BigDecimal balanceAfterOperation) {
+    public Operation(LocalDate date, OperationType type, BigDecimal amount, BigDecimal balanceAfterOperation) {
         this.date = date;
         this.type = type;
         this.amount = amount;
@@ -36,12 +38,8 @@ public class Operation {
         this.date = date;
     }
 
-    public String getType() {
+    public OperationType getType() {
         return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public BigDecimal getAmount() {

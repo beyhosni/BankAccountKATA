@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import bankkata.example.bankkata.model.*;
+import bankkata.example.bankkata.enums.OperationType;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
@@ -41,8 +42,8 @@ class BankkataApplicationTests {
         List<Operation> statement = account.getOperations();
 
         assertEquals(2, statement.size(), "There should be 2 operations in the statement.");
-        assertEquals("DEPOSIT", statement.get(0).getType(), "First operation should be a deposit.");
-        assertEquals("WITHDRAW", statement.get(1).getType(), "Second operation should be a withdrawal.");
+        assertEquals(OperationType.DEPOSIT, statement.get(0).getType(), "First operation should be a deposit.");
+        assertEquals(OperationType.WITHDRAW, statement.get(1).getType(), "Second operation should be a withdrawal.");
 	}
 	
     @Test
